@@ -1,0 +1,8 @@
+.*
+*.code-workspace
+**/*.stories.*
+**/*.test.*
+eslint/
+storybook/
+tsconfig.*
+tsup.config.ts

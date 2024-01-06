@@ -1,0 +1,5 @@
+__.*
+dist/
+coverage/
+node_modules/
+storybook-static/

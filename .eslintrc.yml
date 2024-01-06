@@ -1,0 +1,32 @@
+root: true
+
+env:
+  browser: true
+  es2023: true
+
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: ./tsconfig.json
+  ecmaVersion: latest
+  sourceType: module
+
+settings:
+  react:
+    version: detect
+
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "plugin:react-hooks/recommended"
+  - "plugin:react/jsx-runtime"
+  - "plugin:@typescript-eslint/strict-type-checked" # or
+  # - "plugin:@typescript-eslint/recommended-type-checked"
+  - "plugin:@typescript-eslint/stylistic-type-checked"
+  - "plugin:security/recommended"
+  - "prettier"
+
+rules:
+  "@typescript-eslint/consistent-type-definitions":
+    - "error"
+    - "type"
+  "react/prop-types": "off"

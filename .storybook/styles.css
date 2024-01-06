@@ -1,0 +1,27 @@
+.button-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.button-list > li {
+  display: block;
+}
+
+.button {
+  border: none;
+  color: inherit;
+  box-sizing: content-box;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  border: solid 1px slategray;
+  background-color: transparent;
+  transition: 0.2s ease-in-out background-color;
+}
+
+.button:focus-visible,
+.button:hover {
+  outline: none;
+  background-color: rgb(112 128 144 / 21%);
+}

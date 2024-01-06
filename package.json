@@ -1,0 +1,60 @@
+{
+  "name": "@boonya/react-toaster",
+  "version": "1.0.0-alpha.0",
+  "description": "Simple and lightweight react library to show stackable toasts.",
+  "keywords": [
+    "notification",
+    "alert",
+    "stack",
+    "notistack",
+    "toast",
+    "snackbar"
+  ],
+  "author": "Serhii [boonya] Buinytskyi",
+  "license": "MIT",
+  "engines": {
+    "npm": "~10.2.0",
+    "node": "~20.10.0"
+  },
+  "workspaces": [
+    "eslint"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "lint": "eslint .",
+    "format": "prettier -w .",
+    "code-style": "prettier -c .",
+    "verify": "npm run code-style && npm run lint",
+    "types": "tsc -p tsconfig.json --noEmit",
+    "build": "tsup",
+    "storybook:build": "storybook build"
+  },
+  "dependencies": {
+    "goober": "^2.1.13",
+    "react-transition-group": "^4.4.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17 || ^18",
+    "react-dom": "^16.8 || ^17 || ^18"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-webpack5": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-transition-group": "^4.4.10",
+    "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
