@@ -1,6 +1,6 @@
 {
   "name": "@boonya/react-toaster",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-canary.0",
   "description": "Simple and lightweight react library to show stackable toasts.",
   "keywords": [
     "notification",
@@ -30,6 +30,8 @@
     "verify": "npm run code-style && npm run lint",
     "types": "tsc -p tsconfig.json --noEmit",
     "build": "tsup",
+    "prepack": "jq 'del(.engines, .workspaces, .scripts, .devDependencies)' package.json > clean-package.json && mv clean-package.json package.json",
+    "postpack": "git checkout package.json",
     "storybook:build": "npm run build -w storybook"
   },
   "dependencies": {
