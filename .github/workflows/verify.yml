@@ -21,7 +21,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
       - run: npm ci
-      - run: npm run codestyle-check
+      - run: npm run code-style
 
   lint:
     runs-on: ubuntu-latest
@@ -41,4 +41,4 @@ jobs:
         with:
           node-version-file: ".nvmrc"
       - run: npm ci
-      - run: npm run typecheck
+      - run: npm run types
