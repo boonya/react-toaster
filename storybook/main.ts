@@ -10,13 +10,12 @@ function getAbsolutePath<T extends string>(value: T): T {
 }
 
 const config: StorybookConfig = {
-  stories: ['./**/*.mdx', '../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['./**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
   addons: [
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@storybook/addon-interactions'),
-    getAbsolutePath("@storybook/addon-mdx-gfm")
   ],
 
   framework: {
@@ -39,10 +38,6 @@ const config: StorybookConfig = {
       },
     },
   }),
-
-  docs: {
-    autodocs: true
-  }
 };
 
 export default config;

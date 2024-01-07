@@ -11,7 +11,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Readme', 'Changelog', 'Examples', '*'],
+        order: ['Readme', 'Changelog', 'Toaster', '*'],
       },
     },
   },

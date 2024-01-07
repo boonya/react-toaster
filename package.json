@@ -17,19 +17,20 @@
     "node": "~20.10.0"
   },
   "workspaces": [
-    "eslint"
+    "eslint",
+    "storybook"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "storybook dev -p 6006",
+    "start": "npm start -w storybook",
     "lint": "eslint .",
     "format": "prettier -w .",
     "code-style": "prettier -c .",
     "verify": "npm run code-style && npm run lint",
     "types": "tsc -p tsconfig.json --noEmit",
     "build": "tsup",
-    "storybook:build": "storybook build"
+    "storybook:build": "npm run build -w storybook"
   },
   "dependencies": {
     "goober": "^2.1.13",
@@ -40,24 +41,12 @@
     "react-dom": "^16.8 || ^17 || ^18"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.7",
-    "@babel/preset-react": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.3",
-    "@storybook/addon-essentials": "^7.6.7",
-    "@storybook/addon-interactions": "^7.6.7",
-    "@storybook/addon-links": "^7.6.7",
-    "@storybook/addon-mdx-gfm": "^7.6.7",
-    "@storybook/blocks": "^7.6.7",
-    "@storybook/react": "^7.6.7",
-    "@storybook/react-webpack5": "^7.6.7",
-    "@storybook/test": "^7.6.7",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "@types/react-transition-group": "^4.4.10",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.6.7",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   }

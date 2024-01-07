@@ -2,7 +2,7 @@ import ToasterProvider, {useToaster, DEFAULT_MAX_SHOWN, DEFAULT_DURATION, type V
 import {type Meta} from '@storybook/react';
 
 const meta: Meta = {
-  title: 'Examples',
+  title: 'Toaster',
   args: {
     maxShown: DEFAULT_MAX_SHOWN,
     duration: DEFAULT_DURATION,
