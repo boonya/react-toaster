@@ -35,7 +35,7 @@ export type ToasterProps = {
 export default function ToasterProvider({children, ...options}: PropsWithChildren<ToasterProps>) {
   const maxShown = options.maxShown ?? DEFAULT_MAX_SHOWN;
   const duration = options.duration ?? DEFAULT_DURATION;
-  const container = options.container ?? document.body;
+  const container = options.container;
 
   const {stack, enqueue, dequeue} = useStack({duration});
 

@@ -50,6 +50,7 @@ export default function ToastEffect({id, duration, ...props}: ToastEffectProps) 
     }
     return () => {
       clearTimeout(timeout.current);
+      timeout.current = undefined;
     };
   }, [duration, hide]);
 

@@ -16,7 +16,7 @@ const portalClassName = css({
 });
 
 export type PortalProps = {
-  container: HTMLElement;
+  container?: HTMLElement;
   maxShown: number;
   stack: ToastEffectProps[];
 };
@@ -32,6 +32,6 @@ export default function Portal({stack, container, maxShown}: PortalProps) {
     <div role="presentation" className={portalClassName}>
       {list}
     </div>,
-    container,
+    container ?? document.body,
   );
 }
