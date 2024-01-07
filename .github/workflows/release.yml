@@ -14,9 +14,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"
-      - run: npm set '//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN_RW }}'
+          registry-url: "https://npm.pkg.github.com"
       - run: npm ci --no-workspaces
       - run: npm run build
-      - run: npm publish
+      - run: npm publish --tag canary # ${{ github.event.release.prerelease && 'prerelease' || 'latest' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GHCR_TOKEN_RW }}
