@@ -15,12 +15,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
       - run: npm set '//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN_RW }}'
-      - run: |
-          npm ci \
-            --include-workspace-root \
-            --omit=dev \
-            --omit=peer \
-            --omit=optional
+      - run: npm ci --no-workspaces
       - run: npm run build
       - run: npm publish
         env:
