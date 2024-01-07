@@ -12,6 +12,7 @@
   ],
   "author": "Serhii [boonya] Buinytskyi",
   "license": "MIT",
+  "repository": "https://github.com/boonya/react-toaster",
   "engines": {
     "npm": "~10.2.0",
     "node": "~20.10.0"
