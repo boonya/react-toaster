@@ -1,6 +1,6 @@
 # React Toaster
 
-The library to provide easy to use, fully accessible, customizable and light-weight toasts aka. alerts.
+Simple and lightweight react library to show stackable toasts.
 
 ## Checklist
 
