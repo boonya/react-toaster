@@ -1,3 +1,5 @@
+'use client';
+
 import useStack from './useStack';
 import {PropsWithChildren} from 'react';
 import Portal from './Portal';
