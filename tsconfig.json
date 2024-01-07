@@ -17,10 +17,6 @@
     "sourceMap": true,
     "strict": true,
     "target": "es6",
-    "lib": [
-      "es2022",
-      "dom",
-      "dom.iterable"
-    ]
+    "lib": ["es2022", "dom", "dom.iterable"]
   }
 }
